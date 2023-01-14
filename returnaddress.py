@@ -44,3 +44,16 @@ class InsertingStackValues(Scene):
         stack.push_sp(amount=3, pop=True)
         self.wait(2)
 
+class IteratingThroughString(Scene):
+
+    def construct(self):
+
+        vstring = InputString(self, inp)
+        vstring.construct()
+        vstring.convert_to_boxes()
+        vstring.explain_size_of_char()
+        vstring.convert_to_hex()
+        vstring.move_to_index(2)
+        vstring.move_to_index(7)
+        vstring.move_to_index(3)
+        self.wait(2)
